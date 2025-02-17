@@ -74,7 +74,9 @@ void Unit::showStatus(){
 
 void Unit::newTurn(){
 	guard_on = false; 
+	dodge_on = false;
 }
+
 
 int Unit::beAttacked(int oppatk){
 	int dmg;
@@ -102,6 +104,10 @@ int Unit::heal(){
 void Unit::guard(){
 	guard_on = true;
 }	
+
+void Unit::dodge(){
+	guard_on = true;
+}
 
 bool Unit::isDead(){
 	if(hp <= 0) return true;
